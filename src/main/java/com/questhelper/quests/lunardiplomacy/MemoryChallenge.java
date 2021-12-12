@@ -12,7 +12,7 @@ public class MemoryChallenge extends DetailedQuestStep
 {
 	public MemoryChallenge(QuestHelper questHelper)
 	{
-		super(questHelper, "Follow the path to the end.");
+		super(questHelper, "Solve the path by trial and error to reach the end. Puzzels are different for each player.");
 	}
 
 	@Override

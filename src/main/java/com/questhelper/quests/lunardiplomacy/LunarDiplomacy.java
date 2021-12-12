@@ -725,14 +725,14 @@ public class LunarDiplomacy extends BasicQuestHelper
 		enterMine = new ObjectStep(this, ObjectID.LADDER_14996, new WorldPoint(2142, 3944, 0), "Enter the mine in the north east of Lunar Isle.", pickaxe);
 		mineOre = new ObjectStep(this, ObjectID.STALAGMITE_15251, "Mine a lunar ore from one of the stalagmites in the area. (Tip: Grab 3 extra ores to save time during The Fremennik Exiles quest)", pickaxe);
 		mineOre.addAlternateObjects(ObjectID.STALAGMITES_15250);
-		smeltBar = new DetailedQuestStep(this, "Smelt the ore at a furnace.", lunarOre);
+		smeltBar = new DetailedQuestStep(this, "Smelt the ore at a furnace. There is one with an anvil in Rellakka.", lunarOre);
 		makeHelmet = new DetailedQuestStep(this, "Make the lunar helmet on an anvil.", lunarBar, hammer);
 		talkToPauline = new NpcStep(this, NpcID.PAULINE_POLARIS, new WorldPoint(2070, 3917, 0), "Talk to Pauline Polaris in the west of Lunar Isle's town.", sealOfPassage);
 		talkToPauline.addDialogSteps("Pauline?", "Jane Blud-Hagic-Maid");
 		talkToMeteora = new NpcStep(this, NpcID.METEORA, new WorldPoint(2083, 3890, 0), "Talk to Meteora in the south of Lunar Isle's town.", sealOfPassage);
 		talkToSelene = new NpcStep(this, NpcID.SELENE, new WorldPoint(2079, 3912, 0), "Talk to Selene in the west of Lunar Isle's town.", sealOfPassage);
 		talkToSelene.addDialogStep("I'm looking for a ring.");
-		killSuqahForTiara = new NpcStep(this, NpcID.SUQAH, "Kill the Suqah outside the town for a special tiara. You'll also need 4 hides for making clothes, so pick them up.", true);
+		killSuqahForTiara = new NpcStep(this, NpcID.SUQAH, "Kill the marked Suqah outside the town for a special tiara. He can be safe spotted from the bridge. You'll also need 4 hides for making clothes, so pick them up.", true);
 		pickUpTiara = new ItemStep(this, "Pick up the tiara.", tiara);
 		killSuqahForTiara.addSubSteps(pickUpTiara);
 		returnTiaraToMeteora = new NpcStep(this, NpcID.METEORA, new WorldPoint(2083, 3890, 0),
@@ -743,7 +743,7 @@ public class LunarDiplomacy extends BasicQuestHelper
 			"Talk to Rimae in the east of Lunar Isle's town.", sealOfPassage, suqahHide4, coins400, needle, thread);
 		talkToRimae.addDialogStep("You know the ceremonial clothes?");
 		makeClothes = new NpcStep(this, NpcID.RIMAE_SIRSALIS, new WorldPoint(2104, 3909, 0),
-			"Have Rimae in the east of Lunar Isle's town tan 4 suqah hides, and craft them into the torso, gloves, boots and legs.", sealOfPassage, suqahHide4, coins400, needle, thread);
+			"Have Rimae in the east of Lunar Isle's town tan 4 suqah hides, and use a needle to craft them into the torso, gloves, boots and legs.", sealOfPassage, suqahHide4, coins400, needle, thread);
 		makeClothes.addDialogSteps("You know the ceremonial clothes?", "That seems like a fair deal.");
 
 		bringItemsToOneiromancer = new BringLunarItems(this);
